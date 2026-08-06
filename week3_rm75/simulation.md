@@ -19,7 +19,8 @@ J4를 선택하여 /joint_states의 position 값을 echo로 10초동안 관찰�
 | 궤적 명령 | /rm_group_controller/follow_joint_trajectory | 액션 | 액션 |
 | 그리퍼 명령 | /gripper_controller/follow_joint_trajectory | 액션 | 액션 |
 | 모드/에러 상태 | 없음 | - | - |
-관절과 그리퍼의 현재 상태는 /joint_states 토픽으로 지속적으로 전달되며, 팔과 그리퍼의 이동 명령은 수 초 동안 실행되는 작업이므로 FollowJointTrajectory 액션을 사용한다. demo 모드에서는 실기체의 모드 및 에러 상태 토픽은 확인되지 않았다.
+
+->관절과 그리퍼의 현재 상태는 /joint_states 토픽으로 지속적으로 전달되며, 팔과 그리퍼의 이동 명령은 수 초 동안 실행되는 작업이므로 FollowJointTrajectory 액션을 사용한다. demo 모드에서는 실기체의 모드 및 에러 상태 토픽은 확인되지 않았다.
 
 ## 30초 녹화
 /joint_states를 약 30초 동안 joint_log rosbag으로 녹화하였다. /joint_states의 발행 주기와 녹화 시간을 이용하여 예상한 메시지 수와 ros2 bag info에서 확인한 실제 메시지 수가 유사함을 확인하였다.
